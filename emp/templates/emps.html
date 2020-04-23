@@ -1,0 +1,25 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'emp/main.css' %}">
+<a href="{% url 'addEmp' %}">Add</a>
+<table border="1" id="employee">
+    <thead>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Dept</td>
+        <td>Dept Desc</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </thead>
+    <tbody>
+        {% for emp in emps %}
+        <tr>
+            <td>{{emp.name}}</td>
+            <td>{{emp.age}}</td>
+            <td>{{emp.dept.name}}</td>
+            <td>{{emp.dept.desc|default_if_none:"---"}}</td>
+            <td><a href="{% url 'updateEmp' emp.id %}">Edit</a></td>
+            <td><a href="{% url 'deleteEmp' emp.id %}">Delete This</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,7 @@
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.name }}
+    {{ form.age }}
+    {{ form.dept }}
+    <input type="submit" value="Add">
+</form>
