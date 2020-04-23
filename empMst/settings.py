@@ -28,7 +28,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     '127.0.0.1',
     '192.168.0.115',
-    'https://django-emp.herokuapp.com/'
+    'django-emp.herokuapp.com'
 ]
 
 
