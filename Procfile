@@ -1,0 +1,1 @@
+web: gunicorn empmst.wsgi --log-file -
