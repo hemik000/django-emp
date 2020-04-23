@@ -83,22 +83,16 @@ WSGI_APPLICATION = 'empMst.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-if DEBUG:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'django_empMst',
-            'USER': 'root',
-            'PASSWORD': '',
-            'HOST': 'localhost'
-        }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd38ulgrcuam10n',
+        'USER': 'qaaxxovnowzppc',
+        'PASSWORD': '8fd2ef582a5a8986a85101fd8237986f1a98339f69ceeb4efd4149529593d6dc',
+        'HOST': 'ec2-3-223-21-106.compute-1.amazonaws.com'
     }
-else:
-    DATABASES = {
-        'default': dj_database_url.config(
-            default=config('DATABASE_URL')
-        )
-    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
